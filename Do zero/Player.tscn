@@ -1,0 +1,84 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://alien_predator_mask/predatormask__0006_walk_1.png" type="Texture" id=2]
+[ext_resource path="res://alien_predator_mask/predatormask__0008_walk_3.png" type="Texture" id=3]
+[ext_resource path="res://alien_predator_mask/predatormask__0009_walk_4.png" type="Texture" id=4]
+[ext_resource path="res://alien_predator_mask/predatormask__0007_walk_2.png" type="Texture" id=5]
+[ext_resource path="res://alien_predator_mask/predatormask__0010_walk_5.png" type="Texture" id=6]
+[ext_resource path="res://alien_predator_mask/predatormask__0011_walk_6.png" type="Texture" id=7]
+[ext_resource path="res://alien_predator_mask/predatormask__0000_idle_1.png" type="Texture" id=8]
+[ext_resource path="res://alien_predator_mask/predatormask__0001_idle_2.png" type="Texture" id=9]
+[ext_resource path="res://alien_predator_mask/predatormask__0002_idle_3.png" type="Texture" id=10]
+[ext_resource path="res://alien_predator_mask/predatormask__0027_jump_1.png" type="Texture" id=11]
+[ext_resource path="res://alien_predator_mask/predatormask__0029_jump_3.png" type="Texture" id=12]
+[ext_resource path="res://alien_predator_mask/predatormask__0028_jump_2.png" type="Texture" id=13]
+[ext_resource path="res://alien_predator_mask/predatormask__0030_jump_4.png" type="Texture" id=14]
+[ext_resource path="res://alien_predator_mask/predatormask__0022_dead_1.png" type="Texture" id=15]
+[ext_resource path="res://alien_predator_mask/predatormask__0023_dead_2.png" type="Texture" id=16]
+[ext_resource path="res://alien_predator_mask/predatormask__0024_dead_3.png" type="Texture" id=17]
+[ext_resource path="res://alien_predator_mask/predatormask__0025_dead_4.png" type="Texture" id=18]
+[ext_resource path="res://alien_predator_mask/predatormask__0026_dead_5.png" type="Texture" id=19]
+[ext_resource path="res://elements/background.png" type="Texture" id=20]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "andando",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "pulo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "morte",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 15.155
+height = 50.0
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 128, 320 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+animation = "andando"
+frame = 1
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="background" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 892.123, 220.123 )
+scale = Vector2( 2.28571, 1.48307 )
+texture = ExtResource( 20 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_top = -200
+limit_bottom = 600

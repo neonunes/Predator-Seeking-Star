@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Menu Inicial.gd" type="Script" id=1]
+[ext_resource path="res://elements/menu.png" type="Texture" id=2]
+
+[node name="Menu Inicial" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -20.0
+margin_right = 40.0
+margin_bottom = 20.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_right = 92.0
+margin_bottom = 62.0
+
+[node name="Sprite" type="Sprite" parent="CenterContainer/VBoxContainer"]
+position = Vector2( 80.6493, 29.8424 )
+scale = Vector2( 1.02896, 1.04567 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 92.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.937255, 0.0509804, 0.0509804, 1 )
+custom_colors/font_outline_modulate = Color( 0.92549, 0.913725, 0.0627451, 1 )
+custom_colors/font_color_shadow = Color( 0.207843, 0.807843, 0.121569, 1 )
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 92.0
+margin_bottom = 38.0
+text = "GAME START"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 42.0
+margin_right = 92.0
+margin_bottom = 62.0
+text = "QUIT"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]

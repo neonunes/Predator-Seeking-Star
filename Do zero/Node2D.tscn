@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://tiles/chaum.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.344, 33.0791 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="chaum" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 0.593445, 2.2374 )
+scale = Vector2( 0.977028, 0.988514 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chaum"]
+position = Vector2( -3.00951, -2.33702 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chaum/StaticBody2D"]
+position = Vector2( 33.0792, 33.8142 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chaum2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 63.8113, 1.50231 )
+scale = Vector2( 0.977028, 0.988514 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 64, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chaum2"]
+position = Vector2( -3.00951, -2.33702 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chaum2/StaticBody2D"]
+position = Vector2( 33.0792, 33.8142 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chaum3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 127.764, 0.76722 )
+scale = Vector2( 0.977028, 0.988514 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 128, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chaum3"]
+position = Vector2( -3.00951, -2.33702 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chaum3/StaticBody2D"]
+position = Vector2( 33.0792, 33.8142 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chaum4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 190.247, 0.032135 )
+scale = Vector2( 0.977028, 0.988514 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 192, 0, 64, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="chaum4"]
+position = Vector2( -3.00951, -2.33702 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chaum4/StaticBody2D"]
+position = Vector2( 33.0792, 33.8142 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
